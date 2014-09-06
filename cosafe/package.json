@@ -1,0 +1,13 @@
+{
+  "name": "cosafe",
+  "version": "0.0.0",
+  "dependencies": {
+    "m2x": "*"
+  },
+  "description": "att hackathon",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryantm/attcarhomehackathon.git"
+  }
+}
