@@ -16,6 +16,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+function displayMonoxideLevel() {
+  var m2x = new M2X("b508161c43e6b6dae291d655145999a4");
+  console.log("made m2x");
+  m2x.feeds.streamValues(
+    "314b8fd2a5639cd6ed9597b6eb37ad78",
+    "ledon",
+    {},
+    function(a) {
+      console.log(a);
+      var el = document.getElementById("monoxide");
+      el.innerHTML = a['values'][0]['value'];
+    });
+  console.log("after status");
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -34,18 +49,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
       app.receivedEvent('deviceready');
-      var m2x = new M2X("b508161c43e6b6dae291d655145999a4");
-      console.log("made m2x");
-      m2x.feeds.streamValues(
-        "314b8fd2a5639cd6ed9597b6eb37ad78",
-        "ledon",
-        {},
-        function(a) {
-          console.log(a);
-          var el = document.getElementById("monoxide");
-          el.innerHTML = a['values'][0]['value'];
-        });
-      console.log("after status");
+      //displayMonoxideLevel();
+      setInterval(displayMonoxideLevel, 3000);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
