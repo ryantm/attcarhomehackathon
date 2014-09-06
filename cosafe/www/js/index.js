@@ -34,6 +34,20 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+      var m2x = new M2X("b508161c43e6b6dae291d655145999a4");
+      console.log("made m2x");
+
+      m2x.feeds.streamValues(
+        "314b8fd2a5639cd6ed9597b6eb37ad78",
+        "ledon",
+        {},
+        function(a,b,c,d) {
+          console.log(a);
+          console.log(b);
+          console.log(c);
+          console.log(d);
+        });
+      console.log("after status");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
