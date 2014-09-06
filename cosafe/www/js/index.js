@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var co_level;
 function displayMonoxideLevel() {
   var m2x = new M2X("b508161c43e6b6dae291d655145999a4");
   console.log("made m2x");
@@ -26,11 +27,27 @@ function displayMonoxideLevel() {
     function(a) {
       console.log(a);
       var el = document.getElementById("monoxide");
+      co_level = parseInt(a['values'][0]['value']);
       el.innerHTML = a['values'][0]['value'];
     });
+  if (co_level > 35) {
+    alertMsg();
+  }
   console.log("after status");
 }
 
+function alertDismissed() {
+// do something
+}
+
+function alertMsg(){
+    navigator.notification.alert(
+        'Danger!',  // message
+        alertDismissed,         // callback
+        'Game Over',            // title
+        'Done'                  // buttonName
+    );
+}
 var app = {
     // Application Constructor
     initialize: function() {
