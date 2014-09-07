@@ -17,6 +17,7 @@
  * under the License.
  */
 var co_level;
+var ack = false;
 function displayMonoxideLevel() {
   var m2x = new M2X("b508161c43e6b6dae291d655145999a4");
   console.log("made m2x");
@@ -30,16 +31,18 @@ function displayMonoxideLevel() {
       co_level = parseInt(a['values'][0]['value']);
       el.innerHTML = a['values'][0]['value'];
     });
-  if (co_level > 35) {
+  if (co_level > 35 && ack) {
     alertMsg();
   }
   console.log("after status");
 }
 
 function alertDismissed() {
+  ack = true;
 // do something
 }
 
+    // navigator.notification.beep(10);
 function alertMsg(){
     navigator.notification.alert(
         'Danger!',  // message
