@@ -42,18 +42,23 @@ The Car Module uses the
 [u-blox C027 mbed enabled Internet of Things kit](http://www.u-blox.com/en/evaluation-tools-a-software/reference-designs/for-gps-chips/c027-internet-of-things-kit.html)
 , an ARM mbed development kit, to read the
 [Carbon Monoxide Sensor MQ-7](https://www.sparkfun.com/products/9403)
-from  SparkFun via a one of the ADC pins. A separate pin controls a
+from SparkFun via a one of the ADC pins. A separate pin controls a
 transistor for controlling the MQ-7 heating element. The firmware on
 the CO27 mbed is programmed to detect spikes in sensor readings and
-uses the cellular antenna built into the CO27 mbed, and AT&T's cellular
-network to interface with Ericsson's connected car API endpoint. It
-also uses the cellular connectivity to update an M2X stream. It also uses
-[AT&T's m2x-arm-mbed library](https://github.com/attm2x/m2x-arm-mbed).
+uses the cellular antenna built into the CO27 mbed, and AT&T's
+cellular network to interface with Ericsson's connected car API
+endpoint. It also uses the cellular connectivity to update an M2X
+stream. It also uses
+[AT&T's m2x-arm-mbed library](https://github.com/attm2x/m2x-arm-mbed). The
+[Home module mbed code](http://mbed.org/users/buf006/code/carbon_home_module/)
+is available on the mbed website.
 
 The Home Module uses the
 [Freescale FRDM-K64F](http://mbed.org/platforms/FRDM-K64F/), an ARM
 mbed development platform, to read a button and control a servo to
-demonstrate opening a garage door.
+demonstrate opening a garage door. The
+[Home module mbed code](http://mbed.org/users/buf006/code/carbon_home_module/)
+is available on the mbed website.
 
 The Phone App is built using Adobe Phone Gap. We used the PhoneGap
 Developer App to quickly prototype our app that can be built as a
