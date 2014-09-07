@@ -16,27 +16,26 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var alertMessageDisplayed = false;
+var last_danger_value = 0;
 
 function displayMonoxideDanger() {
-  if (!alertMessageDisplayed) {
-    var m2x = new M2X("b508161c43e6b6dae291d655145999a4");
-    m2x.feeds.streamValues(
-      //"314b8fd2a5639cd6ed9597b6eb37ad78",
-      "c6eabf437b8c69efbb4e4a8d5c60c04d",
-      "danger_bit",
-      {},
-      function(a) {
-        console.log(a);
-        var co_danger = parseInt(a['values'][0]['value']);
-        if (co_danger == 1) {
-          alertMsg();
-        }
-        if (co_danger == 0) {
-          clearDanger();
-        }
-      });
-  }
+  var m2x = new M2X("b508161c43e6b6dae291d655145999a4");
+  m2x.feeds.streamValues(
+    //"314b8fd2a5639cd6ed9597b6eb37ad78",
+    "c6eabf437b8c69efbb4e4a8d5c60c04d",
+    "danger_bit",
+    {},
+    function(a) {
+      console.log(a);
+      var new_danger_value = parseInt(a['values'][0]['value']);
+      if (new_danger_value == 1 && last_danger_value == 0) {
+        alertMsg();
+      }
+      if (new_danger_value == 0) {
+        clearDanger();
+      }
+      last_danger_value = new_danger_value;
+    });
 }
 
 function alertDismissed() {
@@ -46,21 +45,21 @@ function alertDismissed() {
 function clearDanger() {
   var el = document.getElementById("monoxide");
   el.className = "safe";
-  el.innerHTML = "Carbon monoxide levels safe."
+  el.innerHTML = "Carbon monoxide levels are safe."
 }
 
 function alertMsg(){
-    alertMessageDisplayed = true;
-    var el = document.getElementById("monoxide");
-    el.className = "danger";
-    el.innerHTML = "Carbon monoxide levels are unsafe."
+  alertMessageDisplayed = true;
+  var el = document.getElementById("monoxide");
+  el.className = "danger";
+  el.innerHTML = "Carbon monoxide levels are unsafe."
 
-    navigator.notification.alert(
-        'Carbon monoxide levels are unsafe!',  // message
-        alertDismissed,         // callback
-        'Warning',            // title
-        'Done'                  // buttonName
-    );
+  navigator.notification.alert(
+    'Carbon monoxide levels are unsafe!',  // message
+    alertDismissed,         // callback
+    'Warning',            // title
+    'Done'                  // buttonName
+  );
 }
 
 var app = {
