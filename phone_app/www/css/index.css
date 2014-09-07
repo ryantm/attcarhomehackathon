@@ -46,7 +46,15 @@ body {
 }
 
 #monoxide {
-    font-size: 100px;
+    font-size: 50px;
+}
+
+.danger {
+    color: red;
+}
+
+.safe {
+    color: green;
 }
 
 /* Portrait layout (default) */

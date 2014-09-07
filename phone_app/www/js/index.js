@@ -16,43 +16,53 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var co_level;
 var alertMessageDisplayed = false;
 
-function displayMonoxideLevel() {
+function displayMonoxideDanger() {
   if (!alertMessageDisplayed) {
     var m2x = new M2X("b508161c43e6b6dae291d655145999a4");
     m2x.feeds.streamValues(
-      "314b8fd2a5639cd6ed9597b6eb37ad78",
-      "ledon",
+      //"314b8fd2a5639cd6ed9597b6eb37ad78",
+      "c6eabf437b8c69efbb4e4a8d5c60c04d",
+      "danger",
       {},
       function(a) {
         console.log(a);
-        var el = document.getElementById("monoxide");
-        co_level = parseInt(a['values'][0]['value']);
-        el.innerHTML = a['values'][0]['value'];
+        var co_danger = parseInt(a['values'][0]['value']);
+        if (co_danger == 0) {
+          alertMsg();
+        }
+        if (co_danger == 1) {
+          clearDanger();
+        }
       });
-    if (co_level > 35 && !alertMessageDisplayed) {
-      alertMsg();
-    }
   }
 }
 
 function alertDismissed() {
   alertMessageDisplayed = false;
-// do something
 }
 
-    // navigator.notification.beep(10);
+function clearDanger() {
+  var el = document.getElementById("monoxide");
+  el.className = "safe";
+  el.innerHTML = "Carbon monoxide levels safe."
+}
+
 function alertMsg(){
     alertMessageDisplayed = true;
+    var el = document.getElementById("monoxide");
+    el.className = "danger";
+    el.innerHTML = "Carbon monoxide levels are unsafe."
+
     navigator.notification.alert(
-        'Danger!',  // message
+        'Carbon monoxide levels are unsafe!',  // message
         alertDismissed,         // callback
-        'Game Over',            // title
+        'Warning',            // title
         'Done'                  // buttonName
     );
 }
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -71,8 +81,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
       app.receivedEvent('deviceready');
-      displayMonoxideLevel();
-      setInterval(displayMonoxideLevel, 3000);
+      displayMonoxideDanger();
+      setInterval(displayMonoxideDanger, 5000);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
