@@ -24,7 +24,7 @@ function displayMonoxideDanger() {
     //"314b8fd2a5639cd6ed9597b6eb37ad78",
     "c6eabf437b8c69efbb4e4a8d5c60c04d",
     "danger_bit",
-    {},
+    {'limit':1},
     function(a) {
       console.log(a);
       var new_danger_value = parseInt(a['values'][0]['value']);
