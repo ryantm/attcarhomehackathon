@@ -29,10 +29,10 @@ function displayMonoxideDanger() {
       function(a) {
         console.log(a);
         var co_danger = parseInt(a['values'][0]['value']);
-        if (co_danger == 0) {
+        if (co_danger == 1) {
           alertMsg();
         }
-        if (co_danger == 1) {
+        if (co_danger == 0) {
           clearDanger();
         }
       });
