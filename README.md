@@ -61,3 +61,12 @@ cross-platform, native app on Windows, iOS, and Android. The Phone App
 uses
 [AT&T's m2x-javascript library](https://github.com/attm2x/m2x-javascript)
 for interfacing with m2x.
+=======
+* CO Sensor in car passenger cabin
+* nordic mbed with BLE logs CO levels
+* (future work) CO level sensor automatically built into car to turn off engine
+* phone app connects to nordic mbed via BLE
+* phone logs data to M2X
+* if CO level is too high
+* phone gets notification
+* phone sends command to shut down car engine
