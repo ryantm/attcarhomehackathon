@@ -14,7 +14,10 @@ from simply accidentally using a smartphone app. We believe that a
 solution to this problem integrated into a car would be effective at
 reducing the risk of CO poisoning.
 
-Introducing Car Bon =================== Car Bon is a hack, made at the
+Introducing Car Bon
+===================
+
+Car Bon is a hack, made at the
 [AT&T Car, Home & Hackathon](http://attcarhomehackathon.com/) in
 September 2014. The hack consists of a few parts that work together:
 
