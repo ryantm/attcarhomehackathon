@@ -50,14 +50,14 @@ cellular network to interface with Ericsson's connected car API
 endpoint. It also uses the cellular connectivity to update an M2X
 stream. It also uses
 [AT&T's m2x-arm-mbed library](https://github.com/attm2x/m2x-arm-mbed). The
-[Home module mbed code](http://mbed.org/users/buf006/code/carbon_home_module/)
+[Car Module mbed code](http://mbed.org/users/kwchang2/code/Car_Bon_car_module/)
 is available on the mbed website.
 
 The Home Module uses the
 [Freescale FRDM-K64F](http://mbed.org/platforms/FRDM-K64F/), an ARM
 mbed development platform, to read a button and control a servo to
 demonstrate opening a garage door. The
-[Home module mbed code](http://mbed.org/users/buf006/code/carbon_home_module/)
+[Home Module mbed code](http://mbed.org/users/buf006/code/carbon_home_module/)
 is available on the mbed website.
 
 The Phone App is built using Adobe Phone Gap. We used the PhoneGap
