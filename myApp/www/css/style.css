@@ -1,0 +1,26 @@
+/* Empty. Add your own CSS if you like */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.danger {
+    color: red;
+}
+
+.safe {
+    color: green;
+}
+
+.title {
+  font-weight: 30px;
+  color: white;
+}
+
+.monoxide {
+  color: white;
+}
+
+.padding {
+  background-color: #333;
+  text-align: center;
+}
