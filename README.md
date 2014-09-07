@@ -35,7 +35,7 @@ September 2014. The hack consists of a few parts that work together:
   danger reported by the **Car Module** and alerts the app user with
   visual and popup notification. The app works on Windows, iOS, and Android.
 
-How to build
+Building the hack
 ============
 
 The Car Module uses the
