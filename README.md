@@ -66,3 +66,7 @@ cross-platform, native app on Windows, iOS, and Android. The Phone App
 uses
 [AT&T's m2x-javascript library](https://github.com/attm2x/m2x-javascript)
 for interfacing with m2x.
+
+Presentation slides
+===================
+[Presentation slides](https://docs.google.com/presentation/d/1NOYeNe26z3UjaZ_olJZk-4r_qxrCmETwBjggLlNfcCg/edit?usp=sharing)
