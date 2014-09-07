@@ -47,8 +47,8 @@ transistor for controlling the MQ-7 heating element. The firmware on
 the CO27 mbed is programmed to detect spikes in sensor readings and
 uses the cellular antenna built into the CO27 mbed, and AT&T's cellular
 network to interface with Ericsson's connected car API endpoint. It
-also uses the cellular connectivity to update an M2X stream. It uses
-[AT&T's m2x-arm-mbed library](https://github.com/attm2x/m2x-arm-mbed)
+also uses the cellular connectivity to update an M2X stream. It also uses
+[AT&T's m2x-arm-mbed library](https://github.com/attm2x/m2x-arm-mbed).
 
 The Home Module uses the
 [Freescale FRDM-K64F](http://mbed.org/platforms/FRDM-K64F/), an ARM
