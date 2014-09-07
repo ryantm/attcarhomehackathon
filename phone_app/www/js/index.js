@@ -24,7 +24,7 @@ function displayMonoxideDanger() {
     m2x.feeds.streamValues(
       //"314b8fd2a5639cd6ed9597b6eb37ad78",
       "c6eabf437b8c69efbb4e4a8d5c60c04d",
-      "danger",
+      "danger_bit",
       {},
       function(a) {
         console.log(a);
