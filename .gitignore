@@ -1,4 +1,4 @@
 /node_modules/
-/cosafe/node_modules/
-/cosafe/platforms/
+*/node_modules/
+*/platforms/
 /npm-debug.log
