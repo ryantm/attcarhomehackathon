@@ -1,0 +1,21 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+http://car1.hack.att.io/remoteservices/v1/vehicle/engineOff/1234567890abcd
+
+http://car1.hack.att.io/remoteservices/v1/vehicle/engineOff/1TX123456789011223
+
+curl -H "Content-Type:application/json" -X POST --user provider:1234 --data "{\"vin\":\"carbon\"}" http://car1.hack.att.io:3000/vehicles/v1/vehicle/add
+
+curl -H "Content-Type:application/json" -X POST --data "{\"vin\":\"carbon\"}" http://car1.hack.att.io:3000/vehicles/v1/vehicle/add/
+
+
+curl -H "Content-Type:application/json" -X POST --user provider:1234 http://car1.hack.att.io:3000/remoteservices/v1/vehicle/engineOff/carbon
+curl -H "Content-Type:application/json" -X POST --user provider:1234 http://car1.hack.att.io:3000/remoteservices/v1/vehicle/engineOn/carbon
+
+
+curl -H "Content-Type:application/json" -X GET --user provider:1234 http://car1.hack.att.io:3000/remoteservices/v1/vehicle/status/carbon/-350277331
+
+curl -H "Content-Type:application/json" -X GET --user provider:1234 http://car1.hack.att.io:3000/remoteservices/v1/vehicle/status/carbon/-181252523
+

@@ -37,7 +37,7 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size:40px;
     height:100%;
     margin:0px;
     padding:0px;
@@ -45,12 +45,23 @@ body {
     width:100%;
 }
 
+#monoxide {
+    font-size: 40px;
+}
+
+.danger {
+    color: red;
+}
+
+.safe {
+    color: green;
+}
+
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
-    top:50%;
+    top:5%;
     height:50px;                   /* text area height */
     width:225px;                   /* text area width */
     text-align:center;
@@ -74,7 +85,7 @@ h1 {
     font-weight:normal;
     margin:0px;
     overflow:visible;
-    padding:0px;
+    padding:0px 0px 50px 0px;
     text-align:center;
 }
 
