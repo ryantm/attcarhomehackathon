@@ -66,7 +66,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
       app.receivedEvent('deviceready');
-      //displayMonoxideLevel();
+      displayMonoxideLevel();
       setInterval(displayMonoxideLevel, 3000);
     },
     // Update DOM on a Received Event
