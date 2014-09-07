@@ -18,23 +18,24 @@
  */
 var co_level;
 var alertMessageDisplayed = false;
+
 function displayMonoxideLevel() {
-  var m2x = new M2X("b508161c43e6b6dae291d655145999a4");
-  console.log("made m2x");
-  m2x.feeds.streamValues(
-    "314b8fd2a5639cd6ed9597b6eb37ad78",
-    "ledon",
-    {},
-    function(a) {
-      console.log(a);
-      var el = document.getElementById("monoxide");
-      co_level = parseInt(a['values'][0]['value']);
-      el.innerHTML = a['values'][0]['value'];
-    });
-  if (co_level > 35 && !alertMessageDisplayed) {
-    alertMsg();
+  if (!alertMessageDisplayed) {
+    var m2x = new M2X("b508161c43e6b6dae291d655145999a4");
+    m2x.feeds.streamValues(
+      "314b8fd2a5639cd6ed9597b6eb37ad78",
+      "ledon",
+      {},
+      function(a) {
+        console.log(a);
+        var el = document.getElementById("monoxide");
+        co_level = parseInt(a['values'][0]['value']);
+        el.innerHTML = a['values'][0]['value'];
+      });
+    if (co_level > 35 && !alertMessageDisplayed) {
+      alertMsg();
+    }
   }
-  console.log("after status");
 }
 
 function alertDismissed() {
