@@ -52,7 +52,7 @@ also uses the cellular connectivity to update an M2X stream. It also uses
 
 The Home Module uses the
 [Freescale FRDM-K64F](http://mbed.org/platforms/FRDM-K64F/), an ARM
-mbed development platform to read a button and control a servo to
+mbed development platform, to read a button and control a servo to
 demonstrate opening a garage door.
 
 The Phone App is built using Adobe Phone Gap. We used the PhoneGap
