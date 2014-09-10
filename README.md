@@ -55,8 +55,11 @@ is available on the mbed website.
 
 The Home Module uses the
 [Freescale FRDM-K64F](http://mbed.org/platforms/FRDM-K64F/), an ARM
-mbed development platform, to read a button and control a servo to
-demonstrate opening a garage door. The
+mbed development platform, to poll m2x over its ethernet
+connection. It connects to a SparkFun RedBoard, which is used to
+control a RC hobby servo to demonstrate opening a garage door. The
+RedBoard also reads a button, which can be used as a override if our
+demo stops working. The
 [Home Module mbed code](http://mbed.org/users/buf006/code/carbon_home_module/)
 is available on the mbed website.
 
