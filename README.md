@@ -4,7 +4,7 @@ Car Bon: Safety from CO Poisoning
 Premise
 =======
 
-Cars on enclosed spaces can generate high levels of Carbon Monoxide
+Cars in enclosed spaces can generate high levels of Carbon Monoxide
 (CO), which is a colorless, odorless, tasteless toxic gas. This can
 lead to the death of people and their pets.
 
